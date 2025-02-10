@@ -1,0 +1,31 @@
+UPC,Product_Name,Category,Price,Stock_Quantity,Description
+101,Laptop,Electronics,800,10,High-performance laptop
+102,Smartphone,Electronics,600,15,Latest model smartphone
+103,Headphones,Accessories,50,50,Noise-canceling headphones
+104,Smartwatch,Wearables,200,20,Feature-rich smartwatch
+105,Tablet,Electronics,300,30,Lightweight tablet
+106,Keyboard,Accessories,40,40,Ergonomic keyboard
+107,Mouse,Accessories,25,35,Wireless optical mouse
+108,Monitor,Electronics,150,25,4K resolution monitor
+109,Printer,Office Equipment,120,12,All-in-one printer
+110,External Hard Drive,Storage,80,18,1TB external storage
+111,Gaming Console,Gaming,500,10,Next-gen gaming console
+112,Wireless Charger,Accessories,30,50,Fast-charging wireless pad
+113,Bluetooth Speaker,Audio,100,22,Portable Bluetooth speaker
+114,Power Bank,Power,35,40,"10,000mAh power bank"
+115,USB Flash Drive,Storage,20,60,64GB USB 3.0 drive
+116,Router,Networking,90,15,Dual-band Wi-Fi router
+117,Webcam,Accessories,70,20,HD webcam with mic
+118,Graphics Card,Computer Components,400,10,High-end graphics card
+119,Motherboard,Computer Components,250,8,Advanced gaming motherboard
+120,Processor,Computer Components,350,5,Fast processing unit
+121,RAM,Computer Components,100,25,16GB DDR4 RAM
+122,SSD,Storage,150,30,512GB NVMe SSD
+123,HDD,Storage,130,28,2TB SATA HDD
+124,Cooling Fan,Cooling,60,16,Efficient cooling fan
+125,Smart TV,Electronics,700,12,55-inch smart TV
+126,Projector,Electronics,400,7,HD home projector
+127,VR Headset,Gaming,300,10,Virtual reality headset
+128,E-Reader,Electronics,200,18,E-book reader
+129,Fitness Tracker,Wearables,150,20,Accurate fitness tracker
+130,Smart Bulb,Home Automation,20,50,Smart LED bulb with app control
