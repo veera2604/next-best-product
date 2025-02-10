@@ -46,6 +46,20 @@ def get_location(data):
 def get_product_offer():
     return get_product_details(offer_df)
 
+clicked_list = []
+def get_recommended_products(clicked_list):
+    if not clicked_list:
+        return []
+
+    clicked_categories = list(product_df.loc[product_df['UPC'].isin(clicked_list), 'Category'].unique())
+
+    print("\n Clicked_List:", clicked_list)
+    print("\n Clicked_Categories:", clicked_categories)
+
+    recommended_products = product_df[product_df['Category'].isin(clicked_categories)]
+    print(recommended_products)
+
+    return recommended_products
 
 def product_management():
     token = request.args.get('Token')
@@ -55,10 +69,15 @@ def product_management():
     user = get_user_details(token)
     if user.empty:
         return jsonify({"error": "Invalid Token"}), 404
+    
+    clicked_products = request.args.getlist('Clicked_Product')
+    if clicked_products:
+        clicked_list.extend(map(int, clicked_products))
 
     user_id = user['User_ID'].values[0]
     purchase = get_purchase_details(user_id)
     recent_search = get_recent_search_products(user_id)
+    recommended_products = get_recommended_products(clicked_list)
 
     response = {
         '1.User_Details': user.to_dict(orient='records'),
@@ -67,6 +86,8 @@ def product_management():
         '4.Searched_Product_Location': get_location(recent_search),
         '5.Purchased_Product_Location': get_location(purchase),
         '6.Offers_Availability': get_product_offer().to_dict(orient='records'),
+        '7.Recommended_Products': recommended_products.to_dict(orient='records'),
+
     }
 
     return jsonify(response)
